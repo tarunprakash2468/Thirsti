@@ -1,0 +1,257 @@
+type Rating @aws_api_key @aws_iam {
+  id: ID!
+  establishment: String!
+  ice: Int!
+  temperature: Int!
+  quantity: Int!
+  cost: Int!
+  aesthetics: Int!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+input AmplifyAIConversationTurnErrorInput {
+  errorType: String!
+  message: String!
+}
+
+input ModelStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelBooleanInput {
+  ne: Boolean
+  eq: Boolean
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelSubscriptionStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  in: [String]
+  notIn: [String]
+}
+
+input ModelSubscriptionIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  in: [Int]
+  notIn: [Int]
+}
+
+input ModelSubscriptionFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  in: [Float]
+  notIn: [Float]
+}
+
+input ModelSubscriptionBooleanInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelSubscriptionIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  in: [ID]
+  notIn: [ID]
+}
+
+enum ModelAttributeTypes {
+  binary
+  binarySet
+  bool
+  list
+  map
+  number
+  numberSet
+  string
+  stringSet
+  _null
+}
+
+input ModelSizeInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelRatingConnection @aws_api_key @aws_iam {
+  items: [Rating]!
+  nextToken: String
+}
+
+input ModelRatingFilterInput {
+  id: ModelIDInput
+  establishment: ModelStringInput
+  ice: ModelIntInput
+  temperature: ModelIntInput
+  quantity: ModelIntInput
+  cost: ModelIntInput
+  aesthetics: ModelIntInput
+  createdAt: ModelStringInput
+  updatedAt: ModelStringInput
+  and: [ModelRatingFilterInput]
+  or: [ModelRatingFilterInput]
+  not: ModelRatingFilterInput
+}
+
+type Query {
+  getRating(id: ID!): Rating @aws_api_key @aws_iam
+  listRatings(filter: ModelRatingFilterInput, limit: Int, nextToken: String): ModelRatingConnection @aws_api_key @aws_iam
+}
+
+input ModelRatingConditionInput {
+  establishment: ModelStringInput
+  ice: ModelIntInput
+  temperature: ModelIntInput
+  quantity: ModelIntInput
+  cost: ModelIntInput
+  aesthetics: ModelIntInput
+  createdAt: ModelStringInput
+  and: [ModelRatingConditionInput]
+  or: [ModelRatingConditionInput]
+  not: ModelRatingConditionInput
+  updatedAt: ModelStringInput
+}
+
+input CreateRatingInput {
+  id: ID
+  establishment: String!
+  ice: Int!
+  temperature: Int!
+  quantity: Int!
+  cost: Int!
+  aesthetics: Int!
+  createdAt: AWSDateTime
+}
+
+input UpdateRatingInput {
+  id: ID!
+  establishment: String
+  ice: Int
+  temperature: Int
+  quantity: Int
+  cost: Int
+  aesthetics: Int
+  createdAt: AWSDateTime
+}
+
+input DeleteRatingInput {
+  id: ID!
+}
+
+type Mutation {
+  createRating(input: CreateRatingInput!, condition: ModelRatingConditionInput): Rating @aws_api_key @aws_iam
+  updateRating(input: UpdateRatingInput!, condition: ModelRatingConditionInput): Rating @aws_api_key @aws_iam
+  deleteRating(input: DeleteRatingInput!, condition: ModelRatingConditionInput): Rating @aws_api_key @aws_iam
+}
+
+input ModelSubscriptionRatingFilterInput {
+  id: ModelSubscriptionIDInput
+  establishment: ModelSubscriptionStringInput
+  ice: ModelSubscriptionIntInput
+  temperature: ModelSubscriptionIntInput
+  quantity: ModelSubscriptionIntInput
+  cost: ModelSubscriptionIntInput
+  aesthetics: ModelSubscriptionIntInput
+  createdAt: ModelSubscriptionStringInput
+  updatedAt: ModelSubscriptionStringInput
+  and: [ModelSubscriptionRatingFilterInput]
+  or: [ModelSubscriptionRatingFilterInput]
+}
+
+type Subscription {
+  onCreateRating(filter: ModelSubscriptionRatingFilterInput): Rating @aws_subscribe(mutations: ["createRating"]) @aws_api_key @aws_iam
+  onUpdateRating(filter: ModelSubscriptionRatingFilterInput): Rating @aws_subscribe(mutations: ["updateRating"]) @aws_api_key @aws_iam
+  onDeleteRating(filter: ModelSubscriptionRatingFilterInput): Rating @aws_subscribe(mutations: ["deleteRating"]) @aws_api_key @aws_iam
+}

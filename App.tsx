@@ -8,8 +8,13 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import AppNavigator from './src/navigation/AppNavigator';
+import { Amplify } from 'aws-amplify';
+import { withAuthenticator } from '@aws-amplify/ui-react-native';
+import config from './amplify_outputs.json';
 
-function App(): React.JSX.Element {
+Amplify.configure(config);
+
+function App() {
   return (
     <NavigationContainer>
       <AppNavigator />
@@ -17,4 +22,7 @@ function App(): React.JSX.Element {
   );
 }
 
-export default App;
+export default withAuthenticator(App, {
+  signUpAttributes: [],
+  socialProviders: ['apple', 'google'],
+});
