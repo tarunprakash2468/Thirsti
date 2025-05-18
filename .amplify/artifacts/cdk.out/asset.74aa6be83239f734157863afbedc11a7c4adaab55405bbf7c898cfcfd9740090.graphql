@@ -1,0 +1,243 @@
+type Rating @aws_iam @aws_cognito_user_pools {
+  id: ID!
+  rating: Int!
+  comment: String
+  userId: String!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  owner: String
+}
+
+input AmplifyAIConversationTurnErrorInput {
+  errorType: String!
+  message: String!
+}
+
+input ModelStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelBooleanInput {
+  ne: Boolean
+  eq: Boolean
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelSubscriptionStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  in: [String]
+  notIn: [String]
+}
+
+input ModelSubscriptionIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  in: [Int]
+  notIn: [Int]
+}
+
+input ModelSubscriptionFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  in: [Float]
+  notIn: [Float]
+}
+
+input ModelSubscriptionBooleanInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelSubscriptionIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  in: [ID]
+  notIn: [ID]
+}
+
+enum ModelAttributeTypes {
+  binary
+  binarySet
+  bool
+  list
+  map
+  number
+  numberSet
+  string
+  stringSet
+  _null
+}
+
+input ModelSizeInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelRatingConnection @aws_iam @aws_cognito_user_pools {
+  items: [Rating]!
+  nextToken: String
+}
+
+input ModelRatingFilterInput {
+  id: ModelIDInput
+  rating: ModelIntInput
+  comment: ModelStringInput
+  userId: ModelStringInput
+  createdAt: ModelStringInput
+  updatedAt: ModelStringInput
+  and: [ModelRatingFilterInput]
+  or: [ModelRatingFilterInput]
+  not: ModelRatingFilterInput
+  owner: ModelStringInput
+}
+
+type Query {
+  getRating(id: ID!): Rating @aws_iam @aws_cognito_user_pools
+  listRatings(filter: ModelRatingFilterInput, limit: Int, nextToken: String): ModelRatingConnection @aws_iam @aws_cognito_user_pools
+}
+
+input ModelRatingConditionInput {
+  rating: ModelIntInput
+  comment: ModelStringInput
+  userId: ModelStringInput
+  createdAt: ModelStringInput
+  and: [ModelRatingConditionInput]
+  or: [ModelRatingConditionInput]
+  not: ModelRatingConditionInput
+  updatedAt: ModelStringInput
+  owner: ModelStringInput
+}
+
+input CreateRatingInput {
+  id: ID
+  rating: Int!
+  comment: String
+  userId: String!
+  createdAt: AWSDateTime
+}
+
+input UpdateRatingInput {
+  id: ID!
+  rating: Int
+  comment: String
+  userId: String
+  createdAt: AWSDateTime
+}
+
+input DeleteRatingInput {
+  id: ID!
+}
+
+type Mutation {
+  createRating(input: CreateRatingInput!, condition: ModelRatingConditionInput): Rating @aws_iam @aws_cognito_user_pools
+  updateRating(input: UpdateRatingInput!, condition: ModelRatingConditionInput): Rating @aws_iam @aws_cognito_user_pools
+  deleteRating(input: DeleteRatingInput!, condition: ModelRatingConditionInput): Rating @aws_iam @aws_cognito_user_pools
+}
+
+input ModelSubscriptionRatingFilterInput {
+  id: ModelSubscriptionIDInput
+  rating: ModelSubscriptionIntInput
+  comment: ModelSubscriptionStringInput
+  userId: ModelSubscriptionStringInput
+  createdAt: ModelSubscriptionStringInput
+  updatedAt: ModelSubscriptionStringInput
+  and: [ModelSubscriptionRatingFilterInput]
+  or: [ModelSubscriptionRatingFilterInput]
+  owner: ModelStringInput
+}
+
+type Subscription {
+  onCreateRating(filter: ModelSubscriptionRatingFilterInput, owner: String): Rating @aws_subscribe(mutations: ["createRating"]) @aws_iam @aws_cognito_user_pools
+  onUpdateRating(filter: ModelSubscriptionRatingFilterInput, owner: String): Rating @aws_subscribe(mutations: ["updateRating"]) @aws_iam @aws_cognito_user_pools
+  onDeleteRating(filter: ModelSubscriptionRatingFilterInput, owner: String): Rating @aws_subscribe(mutations: ["deleteRating"]) @aws_iam @aws_cognito_user_pools
+}

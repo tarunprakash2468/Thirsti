@@ -45,6 +45,15 @@
   },
   "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPINONEDS9DC11433Name": {
    "Type": "String"
+  },
+  "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthauthenticatedUserRole7545C300Ref": {
+   "Type": "String"
+  },
+  "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthunauthenticatedUserRoleAF2AF7B3Ref": {
+   "Type": "String"
+  },
+  "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthIdentityPool0A9E7BD3Ref": {
+   "Type": "String"
   }
  },
  "Conditions": {
@@ -592,6 +601,28 @@
     "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/RatingDataSource/Resource"
    }
   },
+  "QuerygetRatingauth0FunctionQuerygetRatingauth0FunctionAppSyncFunctionC318E04D": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPINONEDS9DC11433Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerygetRatingauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/6b25c9b572c67e0f7ad41cb8019a90825f3db4b02a0a15b837c7a82dcb302060.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/QuerygetRatingauth0Function/QuerygetRatingauth0Function.AppSyncFunction"
+   }
+  },
   "QuerygetRatingpostAuth0FunctionQuerygetRatingpostAuth0FunctionAppSyncFunction9D9DBAF1": {
    "Type": "AWS::AppSync::FunctionConfiguration",
    "Properties": {
@@ -604,7 +635,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "QuerygetRatingpostAuth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3e8d137445fd489ca67a692091bff170dcc875e61e4850dc774d79210729f97d.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },
@@ -656,6 +687,12 @@
      "Functions": [
       {
        "Fn::GetAtt": [
+        "QuerygetRatingauth0FunctionQuerygetRatingauth0FunctionAppSyncFunctionC318E04D",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
         "QuerygetRatingpostAuth0FunctionQuerygetRatingpostAuth0FunctionAppSyncFunction9D9DBAF1",
         "FunctionId"
        ]
@@ -703,6 +740,34 @@
          }
         ]
        },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthauthenticatedUserRole7545C300Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthunauthenticatedUserRoleAF2AF7B3Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthIdentityPool0A9E7BD3Ref"
+       },
        "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
       ]
      ]
@@ -714,6 +779,28 @@
    "DeletionPolicy": "Delete",
    "Metadata": {
     "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/queryGetRatingResolver"
+   }
+  },
+  "QuerylistRatingsauth0FunctionQuerylistRatingsauth0FunctionAppSyncFunctionF6EC6740": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPINONEDS9DC11433Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerylistRatingsauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/6b25c9b572c67e0f7ad41cb8019a90825f3db4b02a0a15b837c7a82dcb302060.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/QuerylistRatingsauth0Function/QuerylistRatingsauth0Function.AppSyncFunction"
    }
   },
   "QuerylistRatingspostAuth0FunctionQuerylistRatingspostAuth0FunctionAppSyncFunctionADA2DAFB": {
@@ -728,7 +815,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "QuerylistRatingspostAuth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3e8d137445fd489ca67a692091bff170dcc875e61e4850dc774d79210729f97d.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },
@@ -780,6 +867,12 @@
      "Functions": [
       {
        "Fn::GetAtt": [
+        "QuerylistRatingsauth0FunctionQuerylistRatingsauth0FunctionAppSyncFunctionF6EC6740",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
         "QuerylistRatingspostAuth0FunctionQuerylistRatingspostAuth0FunctionAppSyncFunctionADA2DAFB",
         "FunctionId"
        ]
@@ -827,6 +920,34 @@
          }
         ]
        },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthauthenticatedUserRole7545C300Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthunauthenticatedUserRoleAF2AF7B3Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthIdentityPool0A9E7BD3Ref"
+       },
        "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
       ]
      ]
@@ -862,6 +983,28 @@
     "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/MutationcreateRatinginit0Function/MutationcreateRatinginit0Function.AppSyncFunction"
    }
   },
+  "MutationcreateRatingauth0FunctionMutationcreateRatingauth0FunctionAppSyncFunction028EFAC9": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPINONEDS9DC11433Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateRatingauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f05e1f6665fa1db4cf2fed913000212d2209fa4854b10192572b72c44555b56e.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/MutationcreateRatingauth0Function/MutationcreateRatingauth0Function.AppSyncFunction"
+   }
+  },
   "MutationcreateRatingpostAuth0FunctionMutationcreateRatingpostAuth0FunctionAppSyncFunctionC2E985DE": {
    "Type": "AWS::AppSync::FunctionConfiguration",
    "Properties": {
@@ -874,7 +1017,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "MutationcreateRatingpostAuth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3e8d137445fd489ca67a692091bff170dcc875e61e4850dc774d79210729f97d.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },
@@ -932,6 +1075,12 @@
       },
       {
        "Fn::GetAtt": [
+        "MutationcreateRatingauth0FunctionMutationcreateRatingauth0FunctionAppSyncFunction028EFAC9",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
         "MutationcreateRatingpostAuth0FunctionMutationcreateRatingpostAuth0FunctionAppSyncFunctionC2E985DE",
         "FunctionId"
        ]
@@ -979,6 +1128,34 @@
          }
         ]
        },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthauthenticatedUserRole7545C300Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthunauthenticatedUserRoleAF2AF7B3Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthIdentityPool0A9E7BD3Ref"
+       },
        "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
       ]
      ]
@@ -1014,6 +1191,36 @@
     "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/MutationupdateRatinginit0Function/MutationupdateRatinginit0Function.AppSyncFunction"
    }
   },
+  "MutationupdateRatingauth0FunctionMutationupdateRatingauth0FunctionAppSyncFunction5FF9F18D": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "RatingDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateRatingauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1f5fed297da9c32ae3af922bf3a38ccf23b956078887d16891ec06c20c64722c.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/0b28d0a6f3e9e74fda16758ed065ffb91e73d30761c6ccd2e318c3a6fb28ed12.vtl"
+    }
+   },
+   "DependsOn": [
+    "RatingDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/MutationupdateRatingauth0Function/MutationupdateRatingauth0Function.AppSyncFunction"
+   }
+  },
   "MutationupdateRatingpostAuth0FunctionMutationupdateRatingpostAuth0FunctionAppSyncFunctionCD7B61A5": {
    "Type": "AWS::AppSync::FunctionConfiguration",
    "Properties": {
@@ -1026,7 +1233,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "MutationupdateRatingpostAuth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3e8d137445fd489ca67a692091bff170dcc875e61e4850dc774d79210729f97d.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },
@@ -1084,6 +1291,12 @@
       },
       {
        "Fn::GetAtt": [
+        "MutationupdateRatingauth0FunctionMutationupdateRatingauth0FunctionAppSyncFunction5FF9F18D",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
         "MutationupdateRatingpostAuth0FunctionMutationupdateRatingpostAuth0FunctionAppSyncFunctionCD7B61A5",
         "FunctionId"
        ]
@@ -1131,6 +1344,34 @@
          }
         ]
        },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthauthenticatedUserRole7545C300Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthunauthenticatedUserRoleAF2AF7B3Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthIdentityPool0A9E7BD3Ref"
+       },
        "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
       ]
      ]
@@ -1142,6 +1383,36 @@
    "DeletionPolicy": "Delete",
    "Metadata": {
     "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/mutationUpdateRatingResolver"
+   }
+  },
+  "MutationdeleteRatingauth0FunctionMutationdeleteRatingauth0FunctionAppSyncFunction1B4C5D6A": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "RatingDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationdeleteRatingauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1f5fed297da9c32ae3af922bf3a38ccf23b956078887d16891ec06c20c64722c.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/867fb7d7eb8e4127b6d0136b82c5c3f74a52eb410297086859986f8e7e4b02aa.vtl"
+    }
+   },
+   "DependsOn": [
+    "RatingDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/MutationdeleteRatingauth0Function/MutationdeleteRatingauth0Function.AppSyncFunction"
    }
   },
   "MutationdeleteRatingpostAuth0FunctionMutationdeleteRatingpostAuth0FunctionAppSyncFunctionC4A9808F": {
@@ -1156,7 +1427,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "MutationdeleteRatingpostAuth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3e8d137445fd489ca67a692091bff170dcc875e61e4850dc774d79210729f97d.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },
@@ -1208,6 +1479,12 @@
      "Functions": [
       {
        "Fn::GetAtt": [
+        "MutationdeleteRatingauth0FunctionMutationdeleteRatingauth0FunctionAppSyncFunction1B4C5D6A",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
         "MutationdeleteRatingpostAuth0FunctionMutationdeleteRatingpostAuth0FunctionAppSyncFunctionC4A9808F",
         "FunctionId"
        ]
@@ -1255,6 +1532,34 @@
          }
         ]
        },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthauthenticatedUserRole7545C300Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthunauthenticatedUserRoleAF2AF7B3Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthIdentityPool0A9E7BD3Ref"
+       },
        "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
       ]
      ]
@@ -1266,6 +1571,28 @@
    "DeletionPolicy": "Delete",
    "Metadata": {
     "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/mutationDeleteRatingResolver"
+   }
+  },
+  "SubscriptiononCreateRatingauth0FunctionSubscriptiononCreateRatingauth0FunctionAppSyncFunctionCCE73E62": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPINONEDS9DC11433Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononCreateRatingauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3b6d810ef43cdbd93ef462c40b0df0328b89e04f1473a4f82f1178da1f1d5aa0.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/SubscriptiononCreateRatingauth0Function/SubscriptiononCreateRatingauth0Function.AppSyncFunction"
    }
   },
   "SubscriptiononCreateRatingpostAuth0FunctionSubscriptiononCreateRatingpostAuth0FunctionAppSyncFunctionD8E9AC8B": {
@@ -1280,7 +1607,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "SubscriptiononCreateRatingpostAuth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3e8d137445fd489ca67a692091bff170dcc875e61e4850dc774d79210729f97d.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },
@@ -1326,6 +1653,12 @@
      "Functions": [
       {
        "Fn::GetAtt": [
+        "SubscriptiononCreateRatingauth0FunctionSubscriptiononCreateRatingauth0FunctionAppSyncFunctionCCE73E62",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
         "SubscriptiononCreateRatingpostAuth0FunctionSubscriptiononCreateRatingpostAuth0FunctionAppSyncFunctionD8E9AC8B",
         "FunctionId"
        ]
@@ -1346,7 +1679,35 @@
        {
         "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId"
        },
-       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthauthenticatedUserRole7545C300Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthunauthenticatedUserRoleAF2AF7B3Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthIdentityPool0A9E7BD3Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
       ]
      ]
     },
@@ -1357,6 +1718,28 @@
    "DeletionPolicy": "Delete",
    "Metadata": {
     "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/subscriptionOnCreateRatingResolver"
+   }
+  },
+  "SubscriptiononUpdateRatingauth0FunctionSubscriptiononUpdateRatingauth0FunctionAppSyncFunctionC990FC97": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPINONEDS9DC11433Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononUpdateRatingauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3b6d810ef43cdbd93ef462c40b0df0328b89e04f1473a4f82f1178da1f1d5aa0.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/SubscriptiononUpdateRatingauth0Function/SubscriptiononUpdateRatingauth0Function.AppSyncFunction"
    }
   },
   "SubscriptiononUpdateRatingpostAuth0FunctionSubscriptiononUpdateRatingpostAuth0FunctionAppSyncFunction54588B89": {
@@ -1371,7 +1754,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "SubscriptiononUpdateRatingpostAuth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3e8d137445fd489ca67a692091bff170dcc875e61e4850dc774d79210729f97d.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },
@@ -1417,6 +1800,12 @@
      "Functions": [
       {
        "Fn::GetAtt": [
+        "SubscriptiononUpdateRatingauth0FunctionSubscriptiononUpdateRatingauth0FunctionAppSyncFunctionC990FC97",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
         "SubscriptiononUpdateRatingpostAuth0FunctionSubscriptiononUpdateRatingpostAuth0FunctionAppSyncFunction54588B89",
         "FunctionId"
        ]
@@ -1437,7 +1826,35 @@
        {
         "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId"
        },
-       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthauthenticatedUserRole7545C300Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthunauthenticatedUserRoleAF2AF7B3Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthIdentityPool0A9E7BD3Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
       ]
      ]
     },
@@ -1448,6 +1865,28 @@
    "DeletionPolicy": "Delete",
    "Metadata": {
     "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/subscriptionOnUpdateRatingResolver"
+   }
+  },
+  "SubscriptiononDeleteRatingauth0FunctionSubscriptiononDeleteRatingauth0FunctionAppSyncFunction63DBFABF": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPINONEDS9DC11433Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononDeleteRatingauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3b6d810ef43cdbd93ef462c40b0df0328b89e04f1473a4f82f1178da1f1d5aa0.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/SubscriptiononDeleteRatingauth0Function/SubscriptiononDeleteRatingauth0Function.AppSyncFunction"
    }
   },
   "SubscriptiononDeleteRatingpostAuth0FunctionSubscriptiononDeleteRatingpostAuth0FunctionAppSyncFunction779656DB": {
@@ -1462,7 +1901,7 @@
     "FunctionVersion": "2018-05-29",
     "Name": "SubscriptiononDeleteRatingpostAuth0Function",
     "RequestMappingTemplateS3Location": {
-     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3e8d137445fd489ca67a692091bff170dcc875e61e4850dc774d79210729f97d.vtl"
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
     },
     "ResponseMappingTemplate": "$util.toJson({})"
    },
@@ -1508,6 +1947,12 @@
      "Functions": [
       {
        "Fn::GetAtt": [
+        "SubscriptiononDeleteRatingauth0FunctionSubscriptiononDeleteRatingauth0FunctionAppSyncFunction63DBFABF",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
         "SubscriptiononDeleteRatingpostAuth0FunctionSubscriptiononDeleteRatingpostAuth0FunctionAppSyncFunction779656DB",
         "FunctionId"
        ]
@@ -1528,7 +1973,35 @@
        {
         "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId"
        },
-       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthauthenticatedUserRole7545C300Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthunauthenticatedUserRoleAF2AF7B3Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthIdentityPool0A9E7BD3Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
       ]
      ]
     },
@@ -1539,6 +2012,97 @@
    "DeletionPolicy": "Delete",
    "Metadata": {
     "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/subscriptionOnDeleteRatingResolver"
+   }
+  },
+  "RatingOwnerDataResolverFnRatingOwnerDataResolverFnAppSyncFunction7FDE2AFE": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPINONEDS9DC11433Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "RatingOwnerDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/041534e5fd916595f752318f161512d7c7f83b9f2cf32d0f0be381c12253ff68.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/064303962e481067b44300212516363b99aaee539b6bafaf756fdd83ff0b60f0.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/RatingOwnerDataResolverFn/RatingOwnerDataResolverFn.AppSyncFunction"
+   }
+  },
+  "RatingownerResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId"
+    },
+    "FieldName": "owner",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "RatingOwnerDataResolverFnRatingOwnerDataResolverFnAppSyncFunction7FDE2AFE",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Rating\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"owner\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthauthenticatedUserRole7545C300Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthunauthenticatedUserRoleAF2AF7B3Ref"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthIdentityPool0A9E7BD3Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Rating"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/ratingOwnerResolver"
    }
   },
   "CDKMetadata": {

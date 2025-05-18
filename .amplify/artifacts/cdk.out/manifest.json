@@ -22,7 +22,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/b0130684896c65e6dda5271375c28fa59a84ba6758d5b9de30646eb57cbe3732.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fadd9f82726b2107feef58da3bfbe2293af16d8d8289a68c71e45d92cb2d7185.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -65,6 +65,1018 @@
             "data": "region"
           }
         ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/auth/amplifyAuth/UserPool/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthUserPool4BA7F805"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/auth/amplifyAuth/UserPoolAppClient/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthUserPoolAppClient2626C6F8"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/auth/amplifyAuth/IdentityPool": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthIdentityPool3FDE84CC"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/auth/amplifyAuth/authenticatedUserRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthauthenticatedUserRoleD8DA3689"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/auth/amplifyAuth/unauthenticatedUserRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthunauthenticatedUserRole2B524D9E"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/auth/amplifyAuth/IdentityPoolRoleAttachment": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthIdentityPoolRoleAttachment045F17C8"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/auth/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/auth/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/auth/amplifyThirstitarunprakashsandboxc72482d607authamplifyAuthUserPool1405ECF4Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyThirstitarunprakashsandboxc72482d607authamplifyAuthUserPool1405ECF4Ref"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/auth/amplifyThirstitarunprakashsandboxc72482d607authamplifyAuthUserPoolAppClient29A8BB45Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyThirstitarunprakashsandboxc72482d607authamplifyAuthUserPoolAppClient29A8BB45Ref"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/auth/amplifyThirstitarunprakashsandboxc72482d607authamplifyAuthIdentityPool0A9E7BD3Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyThirstitarunprakashsandboxc72482d607authamplifyAuthIdentityPool0A9E7BD3Ref"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/auth/amplifyThirstitarunprakashsandboxc72482d607authamplifyAuthauthenticatedUserRole7545C300Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyThirstitarunprakashsandboxc72482d607authamplifyAuthauthenticatedUserRole7545C300Ref"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/auth/amplifyThirstitarunprakashsandboxc72482d607authamplifyAuthunauthenticatedUserRoleAF2AF7B3Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyThirstitarunprakashsandboxc72482d607authamplifyAuthunauthenticatedUserRoleAF2AF7B3Ref"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/auth.NestedStack/auth.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "auth179371D7"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/userPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "userPoolId"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/webClientId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "webClientId"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/identityPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "identityPoolId"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/authRegion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authRegion"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/allowUnauthenticatedIdentities": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "allowUnauthenticatedIdentities"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/signupAttributes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "signupAttributes"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/usernameAttributes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "usernameAttributes"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/verificationMechanisms": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "verificationMechanisms"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/passwordPolicyMinLength": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "passwordPolicyMinLength"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/passwordPolicyRequirements": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "passwordPolicyRequirements"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/mfaConfiguration": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mfaConfiguration"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/mfaTypes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "mfaTypes"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/socialProviders": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "socialProviders"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/oauthCognitoDomain": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthCognitoDomain"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/oauthScope": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthScope"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/oauthRedirectSignIn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthRedirectSignIn"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/oauthRedirectSignOut": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthRedirectSignOut"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/oauthResponseType": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthResponseType"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/oauthClientId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "oauthClientId"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/groups": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "groups"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/GraphQLAPI/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataGraphQLAPI42A6FA33"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/GraphQLAPI/TransformerSchema": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataGraphQLAPITransformerSchemaFF50A789"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/GraphQLAPI/NONE_DS": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "NONE_DS"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/GraphQLAPI/NONE_DS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataGraphQLAPINONEDS684BF699"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "NONE_DS"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/AmplifyTableManager/AmplifyManagedTableIsCompleteRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyManagedTableIsCompleteRoleF825222C"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/AmplifyTableManager/AmplifyManagedTableOnEventRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyManagedTableOnEventRoleB4E71DEA"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/AmplifyTableManager/AmplifyManagedTableOnEventRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyManagedTableOnEventRoleDefaultPolicyF6DABCB6"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TableManagerCustomProviderframeworkonEvent1DFC2ECC"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider/framework-isComplete/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TableManagerCustomProviderframeworkisComplete2E51021B"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyTableWaiterStateMachineRole470BE899"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyTableWaiterStateMachineRoleDefaultPolicy89F3836A"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AmplifyTableWaiterStateMachine060600BC"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/AmplifyTableManager/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/AmplifyTableManager/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/AmplifyTableManager/reference-to-amplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/AmplifyTableManager/amplifyThirstitarunprakashsandboxc72482d607dataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent6E8948E2Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyThirstitarunprakashsandboxc72482d607dataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent6E8948E2Arn"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/AmplifyTableManager.NestedStack/AmplifyTableManager.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource86290833"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/DynamoDBModelTableReadIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableReadIOPS"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/DynamoDBModelTableWriteIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableWriteIOPS"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/DynamoDBBillingMode": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBBillingMode"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/DynamoDBEnablePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnablePointInTimeRecovery"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/DynamoDBEnableServerSideEncryption": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnableServerSideEncryption"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/HasEnvironmentParameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HasEnvironmentParameter"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/ShouldUsePayPerRequestBilling": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShouldUsePayPerRequestBilling"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/ShouldUsePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShouldUsePointInTimeRecovery"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/RatingTable": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Rating"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/RatingTable/Default/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RatingTable"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Rating"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/CustomTableRatingTable": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Rating"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/GetAttRatingTableStreamArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetAttRatingTableStreamArn"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/GetAttRatingTableName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetAttRatingTableName"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/RatingIAMRole": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "RatingIAMRole"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/RatingIAMRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RatingIAMRole34927639"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "RatingIAMRole"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/RatingDataSource": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "RatingTable"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/RatingDataSource/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RatingDataSource"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "RatingTable"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/QuerygetRatingauth0Function/QuerygetRatingauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerygetRatingauth0FunctionQuerygetRatingauth0FunctionAppSyncFunctionC318E04D"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerygetRatingauth0Function"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/QuerygetRatingpostAuth0Function/QuerygetRatingpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerygetRatingpostAuth0FunctionQuerygetRatingpostAuth0FunctionAppSyncFunction9D9DBAF1"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerygetRatingpostAuth0Function"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/QueryGetRatingDataResolverFn/QueryGetRatingDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QueryGetRatingDataResolverFnQueryGetRatingDataResolverFnAppSyncFunctionAF8F9B75"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QueryGetRatingDataResolverFn"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/queryGetRatingResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetRatingResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Query.getRating"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/QuerylistRatingsauth0Function/QuerylistRatingsauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerylistRatingsauth0FunctionQuerylistRatingsauth0FunctionAppSyncFunctionF6EC6740"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerylistRatingsauth0Function"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/QuerylistRatingspostAuth0Function/QuerylistRatingspostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerylistRatingspostAuth0FunctionQuerylistRatingspostAuth0FunctionAppSyncFunctionADA2DAFB"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerylistRatingspostAuth0Function"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/QueryListRatingsDataResolverFn/QueryListRatingsDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QueryListRatingsDataResolverFnQueryListRatingsDataResolverFnAppSyncFunction32DCB07F"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QueryListRatingsDataResolverFn"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/queryListRatingsResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ListRatingResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Query.listRatings"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/MutationcreateRatinginit0Function/MutationcreateRatinginit0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateRatinginit0FunctionMutationcreateRatinginit0FunctionAppSyncFunction5BAF9E29"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateRatinginit0Function"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/MutationcreateRatingauth0Function/MutationcreateRatingauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateRatingauth0FunctionMutationcreateRatingauth0FunctionAppSyncFunction028EFAC9"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateRatingauth0Function"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/MutationcreateRatingpostAuth0Function/MutationcreateRatingpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateRatingpostAuth0FunctionMutationcreateRatingpostAuth0FunctionAppSyncFunctionC2E985DE"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateRatingpostAuth0Function"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/MutationCreateRatingDataResolverFn/MutationCreateRatingDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationCreateRatingDataResolverFnMutationCreateRatingDataResolverFnAppSyncFunctionE4EC2199"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationCreateRatingDataResolverFn"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/mutationCreateRatingResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateRatingResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.createRating"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/MutationupdateRatinginit0Function/MutationupdateRatinginit0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateRatinginit0FunctionMutationupdateRatinginit0FunctionAppSyncFunctionD6BE62D9"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateRatinginit0Function"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/MutationupdateRatingauth0Function/MutationupdateRatingauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateRatingauth0FunctionMutationupdateRatingauth0FunctionAppSyncFunction5FF9F18D"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateRatingauth0Function"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/MutationupdateRatingpostAuth0Function/MutationupdateRatingpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateRatingpostAuth0FunctionMutationupdateRatingpostAuth0FunctionAppSyncFunctionCD7B61A5"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateRatingpostAuth0Function"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/MutationUpdateRatingDataResolverFn/MutationUpdateRatingDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationUpdateRatingDataResolverFnMutationUpdateRatingDataResolverFnAppSyncFunctionAB5EC0A6"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationUpdateRatingDataResolverFn"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/mutationUpdateRatingResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UpdateRatingResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.updateRating"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/MutationdeleteRatingauth0Function/MutationdeleteRatingauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationdeleteRatingauth0FunctionMutationdeleteRatingauth0FunctionAppSyncFunction1B4C5D6A"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationdeleteRatingauth0Function"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/MutationdeleteRatingpostAuth0Function/MutationdeleteRatingpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationdeleteRatingpostAuth0FunctionMutationdeleteRatingpostAuth0FunctionAppSyncFunctionC4A9808F"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationdeleteRatingpostAuth0Function"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/MutationDeleteRatingDataResolverFn/MutationDeleteRatingDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationDeleteRatingDataResolverFnMutationDeleteRatingDataResolverFnAppSyncFunction8C3E3A20"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationDeleteRatingDataResolverFn"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/mutationDeleteRatingResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeleteRatingResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.deleteRating"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/SubscriptiononCreateRatingauth0Function/SubscriptiononCreateRatingauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateRatingauth0FunctionSubscriptiononCreateRatingauth0FunctionAppSyncFunctionCCE73E62"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononCreateRatingauth0Function"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/SubscriptiononCreateRatingpostAuth0Function/SubscriptiononCreateRatingpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateRatingpostAuth0FunctionSubscriptiononCreateRatingpostAuth0FunctionAppSyncFunctionD8E9AC8B"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononCreateRatingpostAuth0Function"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/SubscriptionOnCreateRatingDataResolverFn/SubscriptionOnCreateRatingDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnCreateRatingDataResolverFnSubscriptionOnCreateRatingDataResolverFnAppSyncFunctionC7B307E3"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnCreateRatingDataResolverFn"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/subscriptionOnCreateRatingResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateRatingResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onCreateRating"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/SubscriptiononUpdateRatingauth0Function/SubscriptiononUpdateRatingauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateRatingauth0FunctionSubscriptiononUpdateRatingauth0FunctionAppSyncFunctionC990FC97"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononUpdateRatingauth0Function"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/SubscriptiononUpdateRatingpostAuth0Function/SubscriptiononUpdateRatingpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateRatingpostAuth0FunctionSubscriptiononUpdateRatingpostAuth0FunctionAppSyncFunction54588B89"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononUpdateRatingpostAuth0Function"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/SubscriptionOnUpdateRatingDataResolverFn/SubscriptionOnUpdateRatingDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnUpdateRatingDataResolverFnSubscriptionOnUpdateRatingDataResolverFnAppSyncFunction96B5C8D5"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnUpdateRatingDataResolverFn"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/subscriptionOnUpdateRatingResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateRatingResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onUpdateRating"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/SubscriptiononDeleteRatingauth0Function/SubscriptiononDeleteRatingauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteRatingauth0FunctionSubscriptiononDeleteRatingauth0FunctionAppSyncFunction63DBFABF"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononDeleteRatingauth0Function"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/SubscriptiononDeleteRatingpostAuth0Function/SubscriptiononDeleteRatingpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteRatingpostAuth0FunctionSubscriptiononDeleteRatingpostAuth0FunctionAppSyncFunction779656DB"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononDeleteRatingpostAuth0Function"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/SubscriptionOnDeleteRatingDataResolverFn/SubscriptionOnDeleteRatingDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnDeleteRatingDataResolverFnSubscriptionOnDeleteRatingDataResolverFnAppSyncFunction6FC06342"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnDeleteRatingDataResolverFn"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/subscriptionOnDeleteRatingResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteRatingResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onDeleteRating"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/RatingOwnerDataResolverFn/RatingOwnerDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RatingOwnerDataResolverFnRatingOwnerDataResolverFnAppSyncFunction7FDE2AFE"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "RatingOwnerDataResolverFn"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/ratingOwnerResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RatingownerResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Rating.owner"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/reference-to-amplifyThirstitarunprakashsandboxc72482d607dataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource04293E85Outputs.amplifyThirstitarunprakashsandboxc72482d607dataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent6E8948E2Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource04293E85OutputsamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataAmplifyTableManagerTableManage925901B6"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/reference-to-amplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/reference-to-amplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPINONEDS9DC11433Name": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPINONEDS9DC11433Name"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/reference-to-amplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9Outputs.amplifyThirstitarunprakashsandboxc72482d607authamplifyAuthauthenticatedUserRole7545C300Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthauthenticatedUserRole7545C300Ref"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/reference-to-amplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9Outputs.amplifyThirstitarunprakashsandboxc72482d607authamplifyAuthunauthenticatedUserRoleAF2AF7B3Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthunauthenticatedUserRoleAF2AF7B3Ref"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating/reference-to-amplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9Outputs.amplifyThirstitarunprakashsandboxc72482d607authamplifyAuthIdentityPool0A9E7BD3Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthIdentityPool0A9E7BD3Ref"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/Rating.NestedStack/Rating.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataRatingNestedStackRatingNestedStackResourceD1E6CE30"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucket9CCB4ACA"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucketPolicyF1C1C548"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucketAutoDeleteObjectsCustomResource437F26F5"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentAwsCliLayerE322F905"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/CustomResource-1536MiB/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB21775929"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/DynamoDBModelTableReadIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableReadIOPS"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/DynamoDBModelTableWriteIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableWriteIOPS"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/DynamoDBBillingMode": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBBillingMode"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/DynamoDBEnablePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnablePointInTimeRecovery"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/DynamoDBEnableServerSideEncryption": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnableServerSideEncryption"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/LatestNodeRuntimeMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LatestNodeRuntimeMap"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
+            "data": true
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 2
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 2
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleA41FC8C2"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleDefaultPolicyFF1C635B"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBC5D8AB21"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/modelIntrospectionSchemaBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketF566B665"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/modelIntrospectionSchemaBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketPolicy4DAB0D15"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/modelIntrospectionSchemaBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketAutoDeleteObjectsCustomResourceFE57309F"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/modelIntrospectionSchemaBucketDeployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketDeploymentAwsCliLayer13C432F7"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/modelIntrospectionSchemaBucketDeployment/CustomResource-1536MiB/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "modelIntrospectionSchemaBucketDeploymentCustomResource1536MiB104B97EC"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/AMPLIFY_DATA_GRAPHQL_ENDPOINTParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMPLIFYDATAGRAPHQLENDPOINTParameter1C2CBB16"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/AMPLIFY_DATA_MODEL_INTROSPECTION_SCHEMA_BUCKET_NAMEParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMPLIFYDATAMODELINTROSPECTIONSCHEMABUCKETNAMEParameter47BF4F44"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/AMPLIFY_DATA_MODEL_INTROSPECTION_SCHEMA_KEYParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMPLIFYDATAMODELINTROSPECTIONSCHEMAKEYParameterB6AEAE8A"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/AMPLIFY_DATA_DEFAULT_NAMEParameter/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AMPLIFYDATADEFAULTNAMEParameterE7C23CC4"
+          }
+        ],
         "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
@@ -77,10 +1089,88 @@
             "data": "CDKMetadataAvailable"
           }
         ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/reference-to-amplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9Outputs.amplifyThirstitarunprakashsandboxc72482d607authamplifyAuthUserPool1405ECF4Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthUserPool1405ECF4Ref"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/reference-to-amplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9Outputs.amplifyThirstitarunprakashsandboxc72482d607authamplifyAuthauthenticatedUserRole7545C300Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthauthenticatedUserRole7545C300Ref"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/reference-to-amplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9Outputs.amplifyThirstitarunprakashsandboxc72482d607authamplifyAuthunauthenticatedUserRoleAF2AF7B3Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthunauthenticatedUserRoleAF2AF7B3Ref"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/reference-to-amplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9Outputs.amplifyThirstitarunprakashsandboxc72482d607authamplifyAuthIdentityPool0A9E7BD3Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyThirstitarunprakashsandboxc72482d607authNestedStackauthNestedStackResource70CF3BB9OutputsamplifyThirstitarunprakashsandboxc72482d607authamplifyAuthIdentityPool0A9E7BD3Ref"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342ApiId"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342GraphQLUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyThirstitarunprakashsandboxc72482d607dataamplifyDataGraphQLAPID8DFE342GraphQLUrl"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data/amplifyThirstitarunprakashsandboxc72482d607dataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiBEAD087D2DestinationBucketArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyThirstitarunprakashsandboxc72482d607dataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiBEAD087D2DestinationBucketArn"
+          }
+        ],
         "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/data.NestedStack/data.NestedStackResource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "data7552DF31"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/awsAppsyncApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncApiId"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/awsAppsyncApiEndpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncApiEndpoint"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/awsAppsyncAuthenticationType": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncAuthenticationType"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/awsAppsyncRegion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncRegion"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/amplifyApiModelSchemaS3Uri": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyApiModelSchemaS3Uri"
+          }
+        ],
+        "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/awsAppsyncAdditionalAuthenticationTypes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncAdditionalAuthenticationTypes"
           }
         ],
         "/amplify-Thirsti-tarunprakash-sandbox-c72482d607/CDKMetadata/Default": [

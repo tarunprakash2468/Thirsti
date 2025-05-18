@@ -1,9 +1,34 @@
 {
+  "auth": {
+    "user_pool_id": "us-west-1_yXbfH2LXr",
+    "aws_region": "us-west-1",
+    "user_pool_client_id": "2rvu35j8rt5vkd9966lmrpl82e",
+    "identity_pool_id": "us-west-1:69ae28b3-f3c4-4de8-b805-65d059e38253",
+    "mfa_methods": [],
+    "standard_required_attributes": [
+      "email"
+    ],
+    "username_attributes": [
+      "email"
+    ],
+    "user_verification_types": [
+      "email"
+    ],
+    "groups": [],
+    "mfa_configuration": "NONE",
+    "password_policy": {
+      "min_length": 8,
+      "require_lowercase": true,
+      "require_numbers": true,
+      "require_symbols": true,
+      "require_uppercase": true
+    },
+    "unauthenticated_identities_enabled": true
+  },
   "data": {
     "url": "https://lthwnnrqqrg6dibmeqnylicxv4.appsync-api.us-west-1.amazonaws.com/graphql",
     "aws_region": "us-west-1",
-    "api_key": "da2-vyupbqmjojhrhlzeixmxzevvsi",
-    "default_authorization_type": "API_KEY",
+    "default_authorization_type": "AMAZON_COGNITO_USER_POOLS",
     "authorization_types": [
       "AWS_IAM"
     ],
@@ -20,45 +45,24 @@
               "isRequired": true,
               "attributes": []
             },
-            "establishment": {
-              "name": "establishment",
+            "rating": {
+              "name": "rating",
+              "isArray": false,
+              "type": "Int",
+              "isRequired": true,
+              "attributes": []
+            },
+            "comment": {
+              "name": "comment",
               "isArray": false,
               "type": "String",
-              "isRequired": true,
+              "isRequired": false,
               "attributes": []
             },
-            "ice": {
-              "name": "ice",
+            "userId": {
+              "name": "userId",
               "isArray": false,
-              "type": "Int",
-              "isRequired": true,
-              "attributes": []
-            },
-            "temperature": {
-              "name": "temperature",
-              "isArray": false,
-              "type": "Int",
-              "isRequired": true,
-              "attributes": []
-            },
-            "quantity": {
-              "name": "quantity",
-              "isArray": false,
-              "type": "Int",
-              "isRequired": true,
-              "attributes": []
-            },
-            "cost": {
-              "name": "cost",
-              "isArray": false,
-              "type": "Int",
-              "isRequired": true,
-              "attributes": []
-            },
-            "aesthetics": {
-              "name": "aesthetics",
-              "isArray": false,
-              "type": "Int",
+              "type": "String",
               "isRequired": true,
               "attributes": []
             },
@@ -84,6 +88,25 @@
             {
               "type": "model",
               "properties": {}
+            },
+            {
+              "type": "auth",
+              "properties": {
+                "rules": [
+                  {
+                    "provider": "userPools",
+                    "ownerField": "owner",
+                    "allow": "owner",
+                    "identityClaim": "cognito:username",
+                    "operations": [
+                      "create",
+                      "update",
+                      "delete",
+                      "read"
+                    ]
+                  }
+                ]
+              }
             }
           ],
           "primaryKeyInfo": {

@@ -1,0 +1,9 @@
+
+    type Rating @model @auth(rules: [{ allow: owner }]) {
+      id: ID!
+      rating: Int!
+      comment: String
+      userId: String!
+      createdAt: AWSDateTime!
+    }
+  

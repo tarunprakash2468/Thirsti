@@ -5,15 +5,9 @@ export const auth = defineAuth({
     email: true,
     phone: false,
     socialProviders: {
-      apple: {
-        clientId: 'YOUR_APPLE_CLIENT_ID',
-        teamId: 'YOUR_APPLE_TEAM_ID',
-        keyId: 'YOUR_APPLE_KEY_ID',
-        privateKey: 'YOUR_APPLE_PRIVATE_KEY'
-      },
       google: {
-        clientId: 'YOUR_GOOGLE_CLIENT_ID',
-        clientSecret: 'YOUR_GOOGLE_CLIENT_SECRET'
+        clientId: process.env.GOOGLE_CLIENT_ID || 'GOOGLE_CLIENT_ID',
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET || 'GOOGLE_CLIENT_SECRET'
       }
     }
   }
